@@ -13,6 +13,17 @@ public class Notifier implements Runnable {
         String name = Thread.currentThread().getName();
         System.out.println(name + " started");
 
+        synchronized (msg){
+            try{
+                Thread.sleep(1000);
+                msg.setMsg(name + " Notifier work done");
+                msg.setSignalled(true);
+            }catch (InterruptedException ex){
+                ex.printStackTrace();
+            }
+        }
+
+
         try{
             Thread.sleep(1000);
             synchronized (msg){
