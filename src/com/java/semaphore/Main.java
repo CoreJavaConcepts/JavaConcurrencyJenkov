@@ -9,5 +9,7 @@ public class Main {
         SemaphoreDemo semaphoreDemo = new SemaphoreDemo(semaphore);
         new Thread(semaphoreDemo, "Thread 1").start();
         new Thread(semaphoreDemo, "Thread 2").start();
+
+
     }
 }

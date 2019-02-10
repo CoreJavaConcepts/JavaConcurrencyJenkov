@@ -19,5 +19,11 @@ public class Main {
             ex.printStackTrace();
         }
 
+        //---------Simple way, non generic way
+        ThreadLocal local = new ThreadLocal();
+        local.set("Local value");
+        String str = (String)local.get();
+        System.out.println(str);
+
     }
 }
