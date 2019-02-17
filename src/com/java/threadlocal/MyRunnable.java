@@ -1,7 +1,7 @@
 package com.java.threadlocal;
 
 public class MyRunnable implements Runnable{
-    ThreadLocal<String> tl;
+    private static ThreadLocal<String> tl;
 
     public MyRunnable(){
         //Thread local with initial value
